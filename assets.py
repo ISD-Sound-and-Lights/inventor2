@@ -32,7 +32,7 @@ class Template:
 		return self.template, self.replacers,
 
 
-def authenticate(username, password, checkCookies=False):
+def authenticate(username, password, checkCookies=True):
 	if checkCookies and __checkLoginCookie(): return 1  # cookies were good, so no need to manually check
 
 	username = str(username)
