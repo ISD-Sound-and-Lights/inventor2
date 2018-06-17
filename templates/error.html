@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>inventor: 404 Error</title>
+    <title>inventor: {errorNumber} Error</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/error.css">
+    <link rel="stylesheet" href="/webassets/css/error.css">
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,7 @@
             <span class="navbar-brand">inventor</span>
             <a class="nav-item nav-link" href="/">Home</a>
             <a class="nav-item nav-link" href="/settings">Settings</a>
-            <span class="navbar-text">logged in as: root</span>
+            <span class="navbar-text">{loginPretty}</span>
         </nav>
 
         <div class="content">
@@ -23,18 +23,18 @@
                 <div class="col errormsg">
                     <div class="errortext">
                     <h1>Oops!</h1>
-                    <p>It looks like you encountered a rogue 404 error.</p>
+                    <p>It looks like you encountered a rogue {errorNumber} error.</p>
                     <p>Click <a href="/">here</a> to get back to our home page.</p>
                     <p>We know errors are no fun, so here's a picture of a kitten to cheer you up.</p>
                     </div>
 
                     <details>
                         <summary>I want the details!</summary>
-                        <p>Referred from <code><script>if (document.referrer === "") {document.write("unknown")} else {document.write(document.referrer)}</script></code>, rendered by <code><script>document.write(location.hostname)</script></code></p>
+                        <p>Referred from <code><script>if (document.referrer === "") {{document.write("unknown")}} else {{document.write(document.referrer)}}</script></code>, rendered by <code><script>document.write(location.hostname)</script></code></p>
                     </details>
                 </div>
                 <div class="col">
-                    <img src="/assets/img/errorcats/404.jpg" />
+                    <img src="/webassets/img/errorcats/{errorNumber}.jpg" />
                 </div>
             </div>
         </div>
